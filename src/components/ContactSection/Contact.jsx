@@ -186,7 +186,7 @@ ${data.get("message")}`
               <h2>
                 Every Great
                 <br />
-                <span>Trade Partnership</span>
+                <span>Trade Partnership </span>
                 Begins With a Conversation.
               </h2>
             </div>
