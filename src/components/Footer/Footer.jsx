@@ -121,9 +121,9 @@ const Footer = () => {
                                 <Phone size={19} />
                             </div>
 
-                            <a href="tel:+910000000000">
+                            <a href="tel:+919511614528">
                                 Contact Our Team
-                                <span>Get in touch by phone</span>
+                                <span>+91 9511614528</span>
                             </a>
                         </div>
 
@@ -132,9 +132,9 @@ const Footer = () => {
                                 <Mail size={19} />
                             </div>
 
-                            <a href="mailto:info@nextgenglobalexim.com">
+                            <a href="mailto:asurve@nextgenglobalexim.com">
                                 Email Us
-                                <span>info@nextgenglobalexim.com</span>
+                                <span>asurve@nextgenglobalexim.com</span>
                             </a>
                         </div>
 
