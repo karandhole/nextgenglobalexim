@@ -1,0 +1,385 @@
+
+.approach-section {
+  width: 100%;
+  padding: 105px 6%;
+  background: #f5f8fa;
+  overflow: hidden;
+}
+
+.approach-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 75px;
+}
+
+/* LEFT CONTENT */
+
+.approach-content {
+  width: 100%;
+}
+
+.approach-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 20px;
+  color: var(--brand-green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.approach-eyebrow-line {
+  width: 34px;
+  height: 3px;
+  background: var(--brand-yellow);
+}
+
+.approach-content h2 {
+  margin-bottom: 25px;
+  color: var(--brand-blue);
+  font-size: clamp(34px, 3.5vw, 35px);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.approach-content h2 span {
+  color: var(--brand-green);
+}
+
+.approach-intro,
+.approach-description {
+  color: #181c20;
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 17px;
+}
+
+.approach-intro strong {
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+/* CORE VALUES */
+
+.approach-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+  padding: 22px 0;
+  border-top: 1px solid #dce5e9;
+  border-bottom: 1px solid #dce5e9;
+}
+
+.approach-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.approach-value-icon {
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+  display: grid;
+  place-items: center;
+  color: var(--brand-green);
+  background: #e9f4e5;
+  border-radius: 50%;
+}
+
+.approach-value h3 {
+  color: var(--brand-blue);
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.approach-value span {
+  color: #82909b;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* BOTTOM */
+
+.approach-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 27px;
+}
+
+.approach-leadership {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #667583;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.leadership-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-green);
+}
+
+.approach-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--brand-blue);
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.approach-link:hover {
+  color: var(--brand-green);
+  gap: 14px;
+}
+
+/* RIGHT IMAGE - DIFFERENT DESIGN */
+
+.approach-visual {
+  position: relative;
+  width: 100%;
+  min-height: 570px;
+  padding: 0 0 35px 35px;
+}
+
+.approach-image {
+  position: relative;
+  width: 100%;
+  height: 535px;
+  overflow: hidden;
+  border-radius: 160px 10px 10px 10px;
+  z-index: 1;
+  background: #dce8df;
+  box-shadow: 0 20px 55px rgba(5, 38, 55, 0.12);
+}
+
+.approach-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.7s ease;
+}
+
+.approach-visual:hover .approach-image img {
+  transform: scale(1.05);
+}
+
+/* GREEN ACCENT PANEL */
+
+.approach-image-accent {
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 90px;
+  height: 90px;
+  background: var(--brand-green);
+  border-radius: 0 10px 0 45px;
+  z-index: 2;
+}
+
+/* FLOATING LABEL */
+
+.approach-image-label {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 19px 24px;
+  background: var(--brand-blue);
+  color: #ffffff;
+  border-left: 5px solid var(--brand-yellow);
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(5, 38, 55, 0.2);
+}
+
+.approach-label-icon {
+  display: grid;
+  place-items: center;
+  color: var(--brand-yellow);
+}
+
+.approach-image-label div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.approach-image-label span {
+  color: #c9e3ed;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.approach-image-label strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* IMAGE CAPTION */
+
+.approach-image-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 22px;
+  background: #ffffff;
+  border-radius: 4px;
+  z-index: 2;
+  box-shadow: 0 8px 25px rgba(5, 38, 55, 0.08);
+}
+
+.approach-image-caption span {
+  color: var(--brand-green);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.approach-image-caption p {
+  color: var(--brand-blue);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .approach-section {
+    padding: 85px 5%;
+  }
+
+  .approach-container {
+    gap: 40px;
+  }
+
+  .approach-visual {
+    min-height: 490px;
+    padding-left: 20px;
+  }
+
+  .approach-image {
+    height: 455px;
+    border-radius: 110px 10px 10px 10px;
+  }
+
+  .approach-values {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .approach-section {
+    padding: 70px 6%;
+  }
+
+  .approach-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .approach-content h2 {
+    font-size: clamp(33px, 7vw, 25px);
+  }
+
+  .approach-values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .approach-visual {
+    max-width: 550px;
+    min-height: 440px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+
+  .approach-image {
+    height: 410px;
+    border-radius: 110px 10px 10px 10px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .approach-section {
+    padding: 55px 5%;
+  }
+
+  .approach-content h2 {
+    font-size: 25px;
+    letter-spacing: px;
+  }
+
+  .approach-values {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .approach-visual {
+    min-height: 350px;
+    padding-left: 12px;
+  }
+
+  .approach-image {
+    height: 320px;
+    border-radius: 85px 8px 8px 8px;
+  }
+
+  .approach-image-accent {
+    width: 60px;
+    height: 60px;
+  }
+
+  .approach-image-label {
+    left: 0;
+    bottom: 65px;
+    padding: 13px 15px;
+    gap: 9px;
+  }
+
+  .approach-image-label strong {
+    font-size: 11px;
+  }
+
+  .approach-image-caption {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .approach-image-caption span {
+    font-size: 19px;
+  }
+
+  .approach-image-caption p {
+    font-size: 9px;
+  }
+
+  .approach-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

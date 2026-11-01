@@ -1,0 +1,278 @@
+ @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+  /* font-family:'Marcellus', serif; */
+.about-section {
+  width: 100%;
+  padding: 100px 6%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  gap: 75px;
+}
+
+/* LEFT IMAGE */
+
+.about-image-wrapper {
+  position: relative;
+  padding: 0 25px 25px 0;
+}
+
+.about-image {
+  position: relative;
+  width: 100%;
+  height: 490px;
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.06);
+}
+
+.about-image-decoration {
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  right: 0;
+  bottom: 0;
+  border: 7px solid var(--brand-green);
+  border-radius: 8px;
+}
+
+/* IMAGE BADGE */
+
+.about-image-badge {
+  position: absolute;
+  left: -25px;
+  bottom: 65px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px 22px;
+  background: var(--brand-blue);
+  color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(5, 38, 55, 0.2);
+}
+
+.about-image-badge svg {
+  color: var(--brand-yellow);
+  flex-shrink: 0;
+}
+
+.about-image-badge div {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-image-badge strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about-image-badge span {
+  font-size: 11px;
+  color: #e1edf2;
+  margin-top: 3px;
+}
+
+/* RIGHT CONTENT */
+
+.about-content {
+  width: 100%;
+}
+
+.about-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--brand-green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.about-tagline span {
+  display: inline-block;
+  width: 32px;
+  height: 3px;
+  background: var(--brand-yellow);
+}
+
+.about-content h2 {
+  color: var(--brand-blue);
+  font-size: clamp(32px, 3.5vw, 46px);
+  font-family:'Marcellus', serif;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.about-content h2 span {
+  color: var(--brand-green);
+}
+
+.about-description {
+  color: #1d2127;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 17px;
+  text-align: left;
+}
+
+/* BOTTOM CONTENT */
+
+.about-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 23px;
+  background: var(--brand-blue);
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background: var(--brand-green);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(92, 186, 60, 0.2);
+}
+
+.about-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.about-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.about-highlight {
+  color: #84919d;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .about-section {
+    padding: 80px 5%;
+  }
+
+  .about-container {
+    gap: 45px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-image {
+    height: 420px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(30px, 4vw, 40px);
+  }
+
+  .about-image-badge {
+    left: -12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 65px 6%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-image-wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-image {
+    height: 380px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(32px, 7vw, 42px);
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 55px 5%;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .about-image-badge {
+    left: -8px;
+    bottom: 45px;
+    padding: 13px 15px;
+    gap: 9px;
+  }
+
+  .about-image-badge strong {
+    font-size: 13px;
+  }
+
+  .about-image-badge span {
+    font-size: 10px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+  }
+
+  .about-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
