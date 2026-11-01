@@ -82,11 +82,10 @@
   align-items: center;
   gap: 5px;
   color: #27384a;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   text-decoration: none;
   padding: 35px 0;
-  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
@@ -438,8 +437,8 @@
    TABLET
 ================================= */
 
-@media (max-width: 1150px) {
-  .navbar-container {
+@media (max-width: 1200px) {
+  /* .navbar-container {
     padding: 0 3%;
     gap: 18px;
   }
@@ -455,6 +454,13 @@
   .navbar-cta {
     padding: 12px;
     font-size: 12px;
+  } */
+     .desktop-navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: block;
   }
 }
 
