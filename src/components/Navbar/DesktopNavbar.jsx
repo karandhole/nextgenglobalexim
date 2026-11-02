@@ -34,15 +34,17 @@ const DesktopNavbar = () => {
                         >
                             <NavLink
                                 to={item.path}
+                                end={!item.children}
                                 className={({ isActive }) =>
-                                    `nav-link ${isActive ? "active" : ""}`
+                                    `nav-link ${item.path === "#"
+                                        ? ""
+                                        : isActive ? "active" : ""
+                                    }`
                                 }
                             >
                                 {item.name}
 
-                                {item.children && (
-                                    <ChevronDown size={15} />
-                                )}
+                                {item.children && <ChevronDown size={15} />}
                             </NavLink>
 
                             {item.children && (
