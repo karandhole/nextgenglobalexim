@@ -1,33 +1,47 @@
 
+/* =====================================
+   FRUIT & VEGETABLE SLIDER SECTION
+===================================== */
+
 .fruit-slider-section {
   width: 100%;
-  padding: 90px 6% 100px;
+  padding: 90px 5% 85px;
   background: #f5f8fa;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .fruit-slider-container {
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* HEADING */
+/* =====================================
+   HEADING
+===================================== */
 
 .fruit-slider-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 40px;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+
+.fruit-slider-heading-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .fruit-slider-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: var(--brand-green);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
 }
@@ -40,11 +54,11 @@
 
 .fruit-slider-heading h2 {
   color: var(--brand-blue);
-  font-size: clamp(32px, 4vw, 35px);
-  font-weight: 800;
+  font-size: clamp(30px, 3.5vw, 35px);
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.2;
-  margin-bottom: 13px;
+  margin: 0 0 14px;
 }
 
 .fruit-slider-heading h2 span {
@@ -52,30 +66,35 @@
 }
 
 .fruit-slider-heading p {
-  max-width: 600px;
-  color: #181c20;
+  max-width: 620px;
+  color: #64727d;
   font-size: 14px;
   line-height: 1.8;
+  margin: 0;
 }
 
-/* NAVIGATION */
+/* =====================================
+   NAVIGATION BUTTONS
+===================================== */
 
 .fruit-slider-navigation {
   display: flex;
-  gap: 11px;
+  align-items: center;
+  gap: 12px;
   flex-shrink: 0;
   margin-bottom: 5px;
 }
 
 .fruit-slider-navigation button {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
-  border: 1px solid #d4e0e5;
+  border: 1px solid #dce6eb;
   border-radius: 50%;
   background: #ffffff;
   color: var(--brand-blue);
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -83,69 +102,110 @@
   background: var(--brand-blue);
   color: #ffffff;
   border-color: var(--brand-blue);
-  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(10, 109, 151, 0.2);
 }
 
-/* SLIDER */
+.fruit-slider-navigation button:active {
+  transform: scale(0.95);
+}
+
+/* =====================================
+   SWIPER WIDTH & LAYOUT FIX
+===================================== */
 
 .fruit-swiper {
-  padding: 5px 2px 25px !important;
-  overflow: visible !important;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 8px 2px 28px !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
 }
 
+.fruit-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.fruit-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* =====================================
+   PRODUCT CARD
+===================================== */
+
 .fruit-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+  min-width: 0;
   background: #ffffff;
-  border-radius: 7px;
+  border: 1px solid #edf1f3;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(5, 38, 55, 0.06);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 5px 22px rgba(5, 38, 55, 0.055);
+  transition: box-shadow 0.35s ease;
 }
 
 .fruit-product-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px rgba(5, 38, 55, 0.12);
+  box-shadow: 0 14px 35px rgba(5, 38, 55, 0.12);
 }
 
-/* IMAGE */
+/* =====================================
+   PRODUCT IMAGE
+===================================== */
 
 .fruit-product-image {
   position: relative;
-  height: 250px;
+  width: 100%;
+  height: 245px;
+  flex-shrink: 0;
   overflow: hidden;
-  background: #e8eef0;
+  background: #edf2f3;
 }
 
 .fruit-product-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
   transition: transform 0.7s ease;
 }
 
 .fruit-product-card:hover .fruit-product-image img {
-  transform: scale(1.09);
+  transform: scale(1.06);
 }
+
+/* =====================================
+   PRODUCT NUMBER
+===================================== */
 
 .fruit-product-number {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 34px;
-  height: 34px;
+  top: 15px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
   display: grid;
   place-items: center;
   background: var(--brand-blue);
   color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 800;
   z-index: 2;
 }
 
-/* IMAGE HOVER OVERLAY */
+/* =====================================
+   IMAGE OVERLAY
+===================================== */
 
 .fruit-product-image-overlay {
   position: absolute;
@@ -155,8 +215,8 @@
   padding: 18px;
   background: linear-gradient(
     180deg,
-    transparent 45%,
-    rgba(5, 38, 55, 0.65) 100%
+    transparent 40%,
+    rgba(5, 38, 55, 0.72) 100%
   );
   opacity: 0;
   transition: opacity 0.35s ease;
@@ -173,10 +233,15 @@
   letter-spacing: 0.5px;
 }
 
-/* PRODUCT INFO */
+/* =====================================
+   PRODUCT INFORMATION
+===================================== */
 
 .fruit-product-info {
-  padding: 19px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 19px 22px;
 }
 
 .fruit-product-category {
@@ -185,8 +250,9 @@
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 1px;
+  line-height: 1.5;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .fruit-product-info h3 {
@@ -194,13 +260,14 @@
   font-size: 17px;
   font-weight: 800;
   line-height: 1.4;
-  margin-bottom: 13px;
+  margin: 0 0 15px;
 }
 
 .fruit-product-line {
   display: block;
-  width: 35px;
+  width: 38px;
   height: 3px;
+  margin-top: auto;
   background: var(--brand-yellow);
   transition: width 0.3s ease;
 }
@@ -209,32 +276,36 @@
   width: 65px;
 }
 
-/* PAGINATION */
+/* =====================================
+   PAGINATION
+===================================== */
 
 .fruit-slider-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .fruit-slider-pagination .swiper-pagination-bullet {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   margin: 0 !important;
-  background: #b9c9d0;
+  background: #c4d0d5;
   opacity: 1;
   transition: all 0.3s ease;
 }
 
 .fruit-slider-pagination .swiper-pagination-bullet-active {
-  width: 28px;
+  width: 27px;
   border-radius: 10px;
   background: var(--brand-green);
 }
 
-/* FOOTER */
+/* =====================================
+   FOOTER
+===================================== */
 
 .fruit-slider-footer {
   margin-top: 30px;
@@ -245,32 +316,41 @@
   color: #82909b;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
-/* TABLET */
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
 
 @media (max-width: 900px) {
   .fruit-slider-section {
     padding: 75px 5%;
   }
 
+  .fruit-slider-heading h2 {
+    font-size: 25px;
+  }
+
   .fruit-product-image {
-    height: 220px;
+    height: 230px;
   }
 }
 
-/* MOBILE */
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
 
 @media (max-width: 650px) {
   .fruit-slider-section {
-    padding: 60px 5% 70px;
+    padding: 58px 5% 65px;
   }
 
   .fruit-slider-heading {
     align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     margin-bottom: 25px;
   }
 
@@ -278,16 +358,26 @@
     font-size: 25px;
   }
 
+  .fruit-slider-heading p {
+    font-size: 13px;
+  }
+
   .fruit-slider-navigation {
     align-self: flex-end;
+    margin-top: -5px;
+  }
+
+  .fruit-slider-navigation button {
+    width: 43px;
+    height: 43px;
   }
 
   .fruit-product-image {
-    height: 250px;
+    height: 260px;
   }
 
   .fruit-product-info {
-    padding: 17px 15px;
+    padding: 18px 16px 20px;
   }
 
   .fruit-product-info h3 {
@@ -295,12 +385,35 @@
   }
 }
 
-/* REDUCED MOTION */
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 380px) {
+  .fruit-slider-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .fruit-slider-heading h2 {
+    font-size: 25px;
+  }
+
+  .fruit-product-image {
+    height: 230px;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .fruit-product-card,
   .fruit-product-image img,
-  .fruit-slider-navigation button {
+  .fruit-slider-navigation button,
+  .fruit-product-line,
+  .fruit-product-image-overlay {
     transition: none;
   }
 }

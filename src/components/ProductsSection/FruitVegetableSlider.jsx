@@ -1,11 +1,9 @@
-
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "./FruitVegetableSlider.css";
@@ -15,57 +13,55 @@ const products = [
     id: 1,
     name: "Alphonso Mangoes",
     category: "Premium Indian Mangoes",
-    image:
-      "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=85",
+    image: "images/products/p7.jpg",
   },
   {
     id: 2,
-    name: "Fresh Red Apples",
-    category: "Fresh Fruits",
-    image:
-      "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=85",
+    name: "Fresh Pineapple",
+    category: "Fresh Tropical Fruits",
+    image: "images/products/p2.jpg",
   },
   {
     id: 3,
-    name: "Fresh Green Broccoli",
-    category: "Quality Vegetables",
-    image:
-      "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=800&q=85",
+    name: "Fresh Bitter Gourd",
+    category: "Fresh Vegetables",
+    image: "images/products/p3.jpg",
   },
   {
     id: 4,
-    name: "Fresh Strawberries",
-    category: "Premium Fresh Produce",
-    image:
-      "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=85",
+    name: "Fresh Lady's Finger (Okra)",
+    category: "Fresh Vegetables",
+    image: "images/products/p4.jpg",
   },
   {
     id: 5,
-    name: "Fresh Bell Peppers",
-    category: "Farm Fresh Vegetables",
-    image:
-      "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=800&q=85",
+    name: "Fresh Onion",
+    category: "Fresh Vegetables",
+    image: "images/products/p5.jpg",
   },
   {
     id: 6,
     name: "Fresh Oranges",
-    category: "Citrus Fruits",
-    image:
-      "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=800&q=85",
+    category: "Fresh Citrus Fruits",
+    image: "images/products/p6.jpg",
   },
   {
     id: 7,
-    name: "Fresh Tomatoes",
-    category: "Fresh Vegetables",
-    image:
-      "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=800&q=85",
+    name: "Fresh Pomegranate",
+    category: "Fresh Fruits",
+    image: "images/products/p1.jpg",
   },
   {
     id: 8,
-    name: "Fresh Grapes",
-    category: "Premium Fresh Fruits",
-    image:
-      "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=800&q=85",
+    name: "Fresh Garlic",
+    category: "Fresh Vegetables",
+    image: "images/products/p8.jpg",
+  },
+  {
+    id: 9,
+    name: "Fresh Carrot",
+    category: "Fresh Vegetables",
+    image: "images/products/p9.jpg",
   },
 ];
 
@@ -78,7 +74,7 @@ const FruitVegetableSlider = () => {
 
         {/* HEADING */}
         <div className="fruit-slider-heading">
-          <div>
+          <div className="fruit-slider-heading-content">
             <span className="fruit-slider-eyebrow">
               <span></span>
               FRESH FROM INDIA
@@ -99,6 +95,7 @@ const FruitVegetableSlider = () => {
           {/* NAVIGATION */}
           <div className="fruit-slider-navigation">
             <button
+              type="button"
               className="fruit-prev"
               aria-label="Previous products"
               onClick={() => swiperRef.current?.slidePrev()}
@@ -107,6 +104,7 @@ const FruitVegetableSlider = () => {
             </button>
 
             <button
+              type="button"
               className="fruit-next"
               aria-label="Next products"
               onClick={() => swiperRef.current?.slideNext()}
@@ -116,16 +114,19 @@ const FruitVegetableSlider = () => {
           </div>
         </div>
 
-        {/* SLIDER */}
+        {/* PRODUCT SLIDER */}
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Pagination, Autoplay]}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          spaceBetween={20}
           slidesPerView={4}
+          slidesPerGroup={1}
+          centeredSlides={false}
+          spaceBetween={22}
           loop={true}
           speed={800}
+          watchOverflow={true}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
@@ -140,17 +141,17 @@ const FruitVegetableSlider = () => {
               slidesPerView: 1,
               spaceBetween: 15,
             },
-            480: {
+            560: {
               slidesPerView: 2,
-              spaceBetween: 15,
-            },
-            768: {
-              slidesPerView: 3,
               spaceBetween: 18,
             },
-            1100: {
-              slidesPerView: 4,
+            850: {
+              slidesPerView: 3,
               spaceBetween: 20,
+            },
+            1150: {
+              slidesPerView: 4,
+              spaceBetween: 22,
             },
           }}
           className="fruit-swiper"
@@ -159,6 +160,7 @@ const FruitVegetableSlider = () => {
             <SwiperSlide key={product.id}>
               <div className="fruit-product-card">
 
+                {/* IMAGE */}
                 <div className="fruit-product-image">
                   <img
                     src={product.image}
@@ -167,7 +169,7 @@ const FruitVegetableSlider = () => {
                   />
 
                   <span className="fruit-product-number">
-                    0{product.id}
+                    {String(product.id).padStart(2, "0")}
                   </span>
 
                   <div className="fruit-product-image-overlay">
@@ -175,6 +177,7 @@ const FruitVegetableSlider = () => {
                   </div>
                 </div>
 
+                {/* PRODUCT DETAILS */}
                 <div className="fruit-product-info">
                   <span className="fruit-product-category">
                     {product.category}

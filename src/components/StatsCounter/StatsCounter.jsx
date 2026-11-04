@@ -35,7 +35,7 @@ const stats = [
   },
   {
     id: 4,
-    number: 4,
+    number: 12,
     suffix: "+",
     label: "Product Categories",
     detail: "Diverse Export Portfolio",
