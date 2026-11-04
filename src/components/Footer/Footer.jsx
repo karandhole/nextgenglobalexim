@@ -5,12 +5,31 @@ import {
     Globe2,
     ArrowUpRight,
     ArrowRight,
+    Factory,
+    ArrowUp,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./Footer.css";
 
 const Footer = () => {
+
+    const [showBackToTop, setShowBackToTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowBackToTop(window.scrollY > 500);
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
         <footer className="main-footer">
 
@@ -199,10 +218,20 @@ const Footer = () => {
                         </Link>
                     </div>
 
-                    <a href="#top" className="footer-back-top">
-                        Back to Top
-                        <ArrowRight size={16} />
-                    </a>
+                     {showBackToTop && (
+                        <button
+                            className="back-to-top-btn"
+                            aria-label="Back to top"
+                            onClick={() => {
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                });
+                            }}
+                        >
+                            <ArrowUp size={23} strokeWidth={2.2} />
+                        </button>
+                    )}
 
                 </div>
 
