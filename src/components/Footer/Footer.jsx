@@ -7,7 +7,15 @@ import {
     ArrowRight,
     Factory,
     ArrowUp,
+
 } from "lucide-react";
+import {
+    FaFacebookF,
+    FaInstagram,
+    FaLinkedinIn,
+    FaYoutube,
+} from "react-icons/fa";
+
 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -59,10 +67,21 @@ const Footer = () => {
                         </p>
 
                         <div className="footer-socials">
-                            <a href="#" aria-label="Facebook">f</a>
-                            <a href="#" aria-label="Instagram">◎</a>
-                            <a href="#" aria-label="LinkedIn">in</a>
-                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="#" aria-label="Facebook">
+                                <FaFacebookF />
+                            </a>
+
+                            <a href="#" aria-label="Instagram">
+                                <FaInstagram />
+                            </a>
+
+                            <a href="#" aria-label="LinkedIn">
+                                <FaLinkedinIn />
+                            </a>
+
+                            <a href="#" aria-label="YouTube">
+                                <FaYoutube />
+                            </a>
                         </div>
 
                     </div>
@@ -74,7 +93,7 @@ const Footer = () => {
                         <span className="footer-heading-line"></span>
 
                         <ul>
-                            
+
                             <li><Link to="/about-us">About Us</Link></li>
                             <li><Link to="/certificates">Export Certificates</Link></li>
                             <li><Link to="/gallery">Our Gallery</Link></li>
@@ -218,7 +237,7 @@ const Footer = () => {
                         </Link>
                     </div>
 
-                     {showBackToTop && (
+                    {showBackToTop && (
                         <button
                             className="back-to-top-btn"
                             aria-label="Back to top"
