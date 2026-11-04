@@ -12,7 +12,7 @@ const AboutSection = () => {
         <div className="about-image-wrapper">
           <div className="about-image">
             <img
-              src="images/gallery/about2.jpg"
+              src="images/gallery/about3.jpg"
               alt="Fresh Indian agricultural produce for export"
             />
           </div>
