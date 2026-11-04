@@ -8,8 +8,16 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: #ffffff;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.35),
+              0 4px 20px rgba(0, 0, 0, 0.035);
+
+  transition: all 0.3s ease;
 }
 
 /* =================================
@@ -25,7 +33,7 @@
 }
 
 .brand-logo img {
-  width: 100px;
+  width: 120px;
   height: 100px;
   object-fit: contain;
 }
@@ -42,7 +50,7 @@
 }
 
 .brand-name small {
-  color: #bd963e;
+  color: #d35f00;
   font-size: 12px;
   letter-spacing: 1.5px;
   margin-top: 4px;
@@ -86,12 +94,13 @@
   font-weight: 700;
   text-decoration: none;
   padding: 35px 0;
+ 
   transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #bd963e;
+  color: #d35f00;
 }
 
 /* =================================
@@ -105,7 +114,7 @@
   width: 270px;
   padding: 12px;
   background: #ffffff;
-  border-top: 3px solid #bd963e;
+  border-top: 3px solid #d35f00;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
   opacity: 0;
@@ -114,8 +123,7 @@
   transition: all 0.25s ease;
 }
 
-.has-dropdown:hover .dropdown-menu,
-.has-dropdown:focus-within .dropdown-menu {
+.has-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -162,7 +170,7 @@
 
 .navbar-cta:hover,
 .mobile-contact-btn:hover {
-  background: #bd963e;
+  background: #d35f00;
   color: #ffffff;
 }
 
@@ -179,8 +187,17 @@
   align-items: center;
   justify-content: space-between;
   min-height: 75px;
-  padding: 10px 5%;
-  background: #ffffff;
+  padding: 1px 5%;
+
+   background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.35),
+              0 4px 20px rgba(0, 0, 0, 0.035);
+
+  transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle {
@@ -279,8 +296,8 @@
 }
 
 .mobile-sidebar-header .brand-logo img {
-  width: 62px;
-  height: 62px;
+  width: 80px;
+  height: 80px;
 }
 
 .mobile-sidebar-header .brand-name {
@@ -337,7 +354,7 @@
 .sidebar-label {
   font-size: 10px;
   font-weight: 700;
-  color: #bd963e;
+  color: #d35f00;
   letter-spacing: 2px;
   margin-bottom: 12px;
 }
@@ -373,7 +390,7 @@
 }
 
 .mobile-nav-link:hover {
-  color: #bd963e;
+  color: #d35f00;
 }
 
 /* =================================
@@ -389,7 +406,7 @@
 }
 
 .mobile-submenu a {
-  color: #697786;
+  color: #1a232c;
   font-size: 12px;
   text-decoration: none;
   padding: 9px 0;
@@ -397,7 +414,7 @@
 }
 
 .mobile-submenu a:hover {
-  color: #bd963e;
+  color: #d35f00;
 }
 
 .rotate-icon {
@@ -437,8 +454,8 @@
    TABLET
 ================================= */
 
-@media (max-width: 1200px) {
-  /* .navbar-container {
+@media (max-width: 1150px) {
+  .navbar-container {
     padding: 0 3%;
     gap: 18px;
   }
@@ -454,13 +471,6 @@
   .navbar-cta {
     padding: 12px;
     font-size: 12px;
-  } */
-     .desktop-navbar {
-    display: none;
-  }
-
-  .mobile-navbar {
-    display: block;
   }
 }
 
@@ -485,12 +495,12 @@
 @media (max-width: 480px) {
   .mobile-navbar-top {
     min-height: 68px;
-    padding: 10px 4%;
+    padding: 1px 4%;
   }
 
   .mobile-navbar-top .brand-logo img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
 
   .mobile-navbar-top .brand-name {
@@ -514,8 +524,8 @@
   }
 
   .mobile-sidebar-header .brand-logo img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .mobile-sidebar-header .brand-name {

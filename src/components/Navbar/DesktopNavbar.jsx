@@ -1,9 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { ChevronDown, ArrowUpRight } from "lucide-react";
 import { navigation } from "../../data/navigation";
 
 
 const DesktopNavbar = () => {
+     const location = useLocation();
+
+    useEffect(() => {
+        document.activeElement?.blur();
+    }, [location.pathname]);
     return (
         <div className="desktop-navbar">
             <div className="navbar-container">
