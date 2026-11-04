@@ -1,10 +1,11 @@
 import React from 'react'
+import GallerySection from '../components/Gallery/GallerySection';
 
 const Gallery = () => {
   return (
-    <div>
-      <h3>Gallery Images</h3>
-    </div>
+    <main>
+      <GallerySection/>
+    </main>
   )
 }
 
