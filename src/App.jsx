@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import FruitsVegetables from "./pages/FruitsVegetables";
+import SpicesHerbalPowders from "./pages/SpicesHerbalPowders";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/products/fruits-vegetables" element={<FruitsVegetables />} />
+         <Route path="/products/spices-herbal-powders" element={<SpicesHerbalPowders />} />
       </Routes>
 
       <Footer />
