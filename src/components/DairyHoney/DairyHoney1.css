@@ -1,0 +1,559 @@
+
+:root {
+  --dairy-blue: #0a6d97;
+  --dairy-green: #5cba3c;
+  --dairy-yellow: #feff00;
+  --dairy-dark: #183447;
+  --dairy-text: #283947;
+  --dairy-cream: #f7f8f2;
+  --dairy-white: #ffffff;
+}
+
+/* =========================
+   BASE
+========================= */
+
+.dairy-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: var(--dairy-dark);
+  font-family: inherit;
+}
+
+.dairy-page * {
+  box-sizing: border-box;
+}
+
+.dairy-page a {
+  text-decoration: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.dairy-hero {
+  position: relative;
+  min-height: 550px;
+  padding: 95px 8% 85px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 55px;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(92, 186, 60, 0.17),
+      transparent 32%
+    ),
+    linear-gradient(120deg, #082e42 0%, #0a526d 55%, #0a6d97 100%);
+}
+
+.dairy-hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.09;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 55px 55px;
+  mask-image: linear-gradient(to right, black, transparent 75%);
+}
+
+.dairy-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.dairy-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: #c9e5ee;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+}
+
+.dairy-eyebrow-line {
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: var(--dairy-green);
+}
+
+.dairy-hero-content h1 {
+  margin: 0 0 25px;
+  font-size: clamp(43px, 5.4vw, 35px);
+  line-height: 1.08;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.dairy-hero-content h1 span {
+  color: #b6e58d;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.dairy-hero-content > p {
+  max-width: 520px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0 0 35px;
+}
+
+.dairy-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 12px 18px;
+  color: #14384a;
+  background: #c4e99c;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.dairy-hero-btn:hover {
+  background: #ffffff;
+  gap: 30px;
+  transform: translateY(-3px);
+}
+
+/* Hero image */
+
+.dairy-hero-visual {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dairy-hero-image-frame {
+  position: relative;
+  width: min(100%, 440px);
+  height: 430px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.38);
+  border-radius: 48% 48% 8px 8px;
+  transform: rotate(2deg);
+}
+
+.dairy-hero-image-frame::before {
+  content: "";
+  position: absolute;
+  inset: 23px -18px -18px 23px;
+  border: 1px solid rgba(182,229,141,0.55);
+  border-radius: 48% 48% 8px 8px;
+  z-index: -1;
+}
+
+.dairy-hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 48% 48% 5px 5px;
+}
+
+.dairy-hero-stamp {
+  position: absolute;
+  right: -12px;
+  bottom: 45px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: var(--dairy-yellow);
+  color: #173c35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  transform: rotate(10deg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.stamp-divider {
+  width: 24px;
+  height: 1px;
+  background: rgba(23,60,53,0.45);
+}
+
+.dairy-hero-side-note {
+  position: absolute;
+  left: -10px;
+  bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(255,255,255,0.75);
+  font-size: 9px;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.dairy-hero-side-note span:first-child {
+  color: #c4e99c;
+  font-weight: 700;
+}
+
+.dairy-hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  min-height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.65);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.dairy-intro {
+  padding: 105px 10%;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 70px;
+  background: var(--dairy-cream);
+}
+
+.dairy-intro-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding-top: 13px;
+  color: var(--dairy-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.dairy-intro-label div {
+  width: 38px;
+  height: 2px;
+  margin-top: 5px;
+  background: var(--dairy-green);
+}
+
+.dairy-intro-content h2 {
+  margin: 0 0 25px;
+  font-size: clamp(34px, 4vw, 35px);
+  line-height: 1.17;
+  letter-spacing: 0.7px;
+  color: var(--dairy-dark);
+}
+
+.dairy-intro-content h2 span {
+  color: var(--dairy-blue);
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.dairy-intro-content p {
+  max-width: 740px;
+  margin: 0;
+  color: var(--dairy-text);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.dairy-products {
+  padding: 105px 8%;
+  background: #ffffff;
+}
+
+.dairy-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 65px;
+}
+
+.dairy-section-kicker {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--dairy-green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.dairy-section-heading h2 {
+  margin: 0;
+  color: var(--dairy-dark);
+  font-size: clamp(32px, 4vw, 35px);
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+.dairy-section-heading > p {
+  margin: 0 0 5px;
+  color: var(--dairy-text);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Product cards */
+
+.dairy-product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.dairy-product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 450px;
+  background: #f7f9f6;
+}
+
+.dairy-product-card.dairy-product-reverse .dairy-product-image {
+  order: 2;
+}
+
+.dairy-product-card.dairy-product-reverse .dairy-product-info {
+  order: 1;
+}
+
+.dairy-product-image {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+  background: #e9eee8;
+}
+
+.dairy-product-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.dairy-product-card:hover .dairy-product-image img {
+  transform: scale(1.045);
+}
+
+.dairy-image-number {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  padding: 10px 13px;
+  color: #ffffff;
+  background: rgba(8,46,66,0.8);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dairy-image-tag {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  padding: 10px 15px;
+  color: #183447;
+  background: #d6efa9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dairy-product-info {
+  padding: 55px clamp(30px, 5vw, 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dairy-product-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 23px;
+  color: var(--dairy-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.dairy-product-topline span:last-child {
+  color: #9ba9a6;
+}
+
+.dairy-product-info h3 {
+  margin: 0 0 14px;
+  color: var(--dairy-dark);
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 35px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.dairy-product-description {
+  margin: 0;
+  color: var(--dairy-text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.dairy-product-divider {
+  width: 100%;
+  height: 1px;
+  margin: 27px 0 22px;
+  background: #dce5df;
+}
+
+.dairy-highlights-label {
+  margin-bottom: 16px;
+  color: var(--dairy-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.dairy-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.dairy-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #1d262e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.dairy-highlights li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--dairy-green);
+}
+
+.dairy-product-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  width: fit-content;
+  min-width: 210px;
+  padding: 14px 17px;
+  color: #ffffff;
+  background: var(--dairy-blue);
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.dairy-product-link:hover {
+  background: var(--dairy-dark);
+  gap: 35px;
+}
+
+
+.dairy-cta {
+  padding: 65px 6%;
+  background: #f5f7f2;
+}
+
+.dairy-cta-box {
+  max-width: 1050px;
+  margin: auto;
+  padding: 45px 25px;
+  text-align: center;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #082f43, #0a6d97);
+  border: 1px solid rgba(92,186,60,0.5);
+  box-shadow: 0 15px 40px rgba(8,47,67,0.14);
+}
+
+.dairy-cta-box > span {
+  color: #b9e994;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.dairy-cta-box h2 {
+  color: #fff;
+  font-size: clamp(25px, 3.5vw, 35px);
+  margin: 15px 0 10px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.dairy-cta-box p {
+  color: #eff2f3;
+  font-size: 13px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.dairy-cta-box a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 23px;
+  border-radius: 5px;
+  background: #b9e994;
+  color: #183447;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.dairy-cta-box a:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+  .dairy-cta {
+    padding: 45px 5%;
+  }
+
+  .dairy-cta-box {
+    padding: 35px 18px;
+  }
+}

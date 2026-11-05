@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import FruitsVegetables from "./pages/FruitsVegetables";
 import SpicesHerbalPowders from "./pages/SpicesHerbalPowders";
+import DairyHoney from "./pages/DairyHoney";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/products/fruits-vegetables" element={<FruitsVegetables />} />
          <Route path="/products/spices-herbal-powders" element={<SpicesHerbalPowders />} />
+         <Route path="/products/dairy-products-honey" element={<DairyHoney />} />
       </Routes>
 
       <Footer />
