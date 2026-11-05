@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import FruitsVegetables from "./pages/FruitsVegetables";
 import SpicesHerbalPowders from "./pages/SpicesHerbalPowders";
 import DairyHoney from "./pages/DairyHoney";
+import ImitationJewellery from "./pages/ImitationJewellery";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/products/fruits-vegetables" element={<FruitsVegetables />} />
          <Route path="/products/spices-herbal-powders" element={<SpicesHerbalPowders />} />
          <Route path="/products/dairy-products-honey" element={<DairyHoney />} />
+         <Route path="/products/imitation-jewellery" element={<ImitationJewellery />} />
       </Routes>
 
       <Footer />
