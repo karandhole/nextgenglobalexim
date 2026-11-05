@@ -8,8 +8,7 @@ const products = [
     category: "Premium Tropical Fruits",
     description:
       "World-class Konkan Alphonso Mangoes, GI Certified, organic and carbide-free.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/11/mango_pic5-1.jpg",
+    image:"/images/products/p7.jpg",
     tag: "GI Certified",
   },
   {
@@ -18,8 +17,7 @@ const products = [
     category: "Premium Indian Fruits",
     description:
       "Fresh Bhagwa Pomegranates sourced from the fertile farms of Maharashtra.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/11/pomegenerate1-scaled.jpg",
+    image:"/images/products/p1.jpg",
     tag: "Farm Fresh",
   },
   {
@@ -28,8 +26,7 @@ const products = [
     category: "Tropical Fruits",
     description:
       "Export-quality pineapples carefully selected for freshness and taste.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/11/pine_apple-rotated.jpg",
+image:"/images/products/p2.jpg",
     tag: "Export Quality",
   },
   {
@@ -38,8 +35,7 @@ const products = [
     category: "Nutrient-Rich Fruits",
     description:
       "Premium Indian Gooseberries harvested fresh for natural nourishment.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/12/amla-768x1024.jpg",
+    image:"/images/products/p10.jpg",
     tag: "Natural Goodness",
   },
   {
@@ -48,8 +44,7 @@ const products = [
     category: "Tropical Fruits",
     description:
       "Naturally sweet papayas, carefully selected for quality and freshness.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/12/pappya.jpg",
+   image:"/images/products/p11.jpg",
     tag: "Fresh Harvest",
   },
   {
@@ -58,8 +53,7 @@ const products = [
     category: "Citrus Fruits",
     description:
       "Refreshing sweet lime packed with citrus goodness and natural flavor.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/12/sweet_lime-rotated.jpg",
+    image:"/images/products/p6.jpg",
     tag: "Citrus Fresh",
   },
   {
@@ -68,8 +62,7 @@ const products = [
     category: "Fresh Vegetables",
     description:
       "A carefully selected assortment of fresh vegetables for global markets.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/12/mix_vegetables.jpg",
+    image:"/images/products/p3.jpg",
     tag: "Farm Selection",
   },
   {
@@ -78,8 +71,7 @@ const products = [
     category: "Fresh Vegetables",
     description:
       "Premium farm-fresh okra selected for its quality, freshness and taste.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/12/okra.jpg",
+    image:"/images/products/p4.jpg",
     tag: "Farm Fresh",
   },
   {
@@ -88,8 +80,7 @@ const products = [
     category: "Fresh Vegetables",
     description:
       "Healthy farm-fresh carrots selected for their natural color and quality.",
-    image:
-      "https://nextgenglobalexim.com/wp-content/uploads/2025/12/carrot-rotated.jpg",
+    image:"/images/products/p9.jpg",
     tag: "Premium Quality",
   },
 ];
