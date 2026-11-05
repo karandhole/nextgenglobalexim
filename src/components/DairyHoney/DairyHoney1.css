@@ -557,3 +557,218 @@
     padding: 35px 18px;
   }
 }
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .dairy-hero {
+    grid-template-columns: 1fr;
+    padding: 65px 6% 75px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .dairy-hero-content {
+    margin: auto;
+  }
+
+  .dairy-hero-content h1 {
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+
+  .dairy-hero-content > p {
+    font-size: 13px;
+    margin: 0 auto 25px;
+  }
+
+  .dairy-hero-visual {
+    min-height: 300px;
+  }
+
+  .dairy-hero-image-frame {
+    width: 75%;
+    height: 290px;
+  }
+
+  .dairy-hero-stamp {
+    width: 85px;
+    height: 85px;
+    right: 0;
+    font-size: 8px;
+  }
+
+  .dairy-hero-side-note {
+    left: 0;
+  }
+
+  .dairy-hero-bottom {
+    left: 6%;
+    right: 6%;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  /* INTRO */
+  .dairy-intro {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+    gap: 20px;
+  }
+
+  .dairy-intro-content h2 {
+    font-size: 30px;
+  }
+
+  .dairy-intro-content p {
+    font-size: 13px;
+  }
+
+  /* PRODUCTS */
+  .dairy-products {
+    padding: 60px 5%;
+  }
+
+  .dairy-section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .dairy-section-heading h2 {
+    font-size: 30px;
+  }
+
+  .dairy-product-list {
+    gap: 35px;
+  }
+
+  .dairy-product-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .dairy-product-card.dairy-product-reverse .dairy-product-image,
+  .dairy-product-card.dairy-product-reverse .dairy-product-info {
+    order: initial;
+  }
+
+  .dairy-product-image,
+  .dairy-product-image img {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .dairy-product-info {
+    padding: 30px 22px;
+  }
+
+  .dairy-product-info h3 {
+    font-size: 36px;
+  }
+
+  .dairy-product-description {
+    font-size: 13px;
+  }
+
+  .dairy-highlights li {
+    font-size: 12px;
+  }
+
+  .dairy-product-link {
+    width: 100%;
+  }
+
+  /* CTA */
+  .dairy-cta {
+    padding: 45px 5%;
+  }
+
+  .dairy-cta-box {
+    padding: 32px 18px;
+    border-radius: 10px;
+  }
+
+  .dairy-cta-box h2 {
+    font-size: 25px;
+    line-height: 1.35;
+  }
+
+  .dairy-cta-box p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .dairy-hero-content h1 {
+    font-size: 31px;
+  }
+
+  .dairy-hero-image-frame {
+    width: 78%;
+    height: 250px;
+  }
+
+  .dairy-hero-visual {
+    min-height: 270px;
+  }
+
+  .dairy-hero-stamp {
+    width: 72px;
+    height: 72px;
+    font-size: 7px;
+  }
+
+  .dairy-hero-bottom {
+    font-size: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .dairy-intro-content h2 {
+    font-size: 27px;
+  }
+
+  .dairy-section-heading h2 {
+    font-size: 27px;
+  }
+
+  .dairy-product-image,
+  .dairy-product-image img {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .dairy-product-info {
+    padding: 25px 17px;
+  }
+
+  .dairy-product-info h3 {
+    font-size: 32px;
+  }
+
+  .dairy-product-topline {
+    font-size: 8px;
+  }
+
+  .dairy-highlights {
+    gap: 10px;
+  }
+
+  .dairy-cta-box h2 {
+    font-size: 22px;
+  }
+
+  .dairy-cta-box > span {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+}
+
