@@ -13,6 +13,7 @@ import {
   Anchor,
   Headphones,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 import "./Contact.css";
 
@@ -91,7 +92,7 @@ ${data.get("message")}`
                   rel="noreferrer"
                   className="export-secondary-btn"
                 >
-                  <MessageCircle size={18} />
+                   <FaWhatsapp size={19} />
                   WhatsApp Us
                 </a>
 
@@ -260,7 +261,7 @@ ${data.get("message")}`
             >
 
               <div className="export-strip-icon export-whatsapp-icon">
-                <MessageCircle />
+                <FaWhatsapp size={22} />
               </div>
 
               <div>
@@ -548,7 +549,7 @@ ${data.get("message")}`
                 rel="noreferrer"
                 className="export-aside-whatsapp"
               >
-                <MessageCircle size={19} />
+                <FaWhatsapp size={22} />
                 Chat on WhatsApp
                 <ArrowUpRight size={18} />
               </a>
