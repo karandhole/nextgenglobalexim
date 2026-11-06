@@ -13,12 +13,11 @@ const slides = [
   {
     id: 1,
     subtitle: "YOUR TRUSTED GLOBAL EXPORT PARTNER",
-    title: "Worldwide Exporters of Premium GI-Certified ",
-    highlight: "Konkan Alphonso Mangoes",
+    title: "Worldwide Exporters of Premium Ratnagiri Alphonso &  ",
+    highlight: "Gujarat Kesar Mangoes",
     // description:
     //   "Bringing India's finest products to international markets with quality, reliability and excellence.",
-    image:
-      "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=2000&q=85",
+    image:"images/banners/slider5.png",
   },
   {
     id: 2,
@@ -32,11 +31,10 @@ const slides = [
   {
     id: 3,
     subtitle: "EXPANDING GLOBAL OPPORTUNITIES",
-    title: "Global Exporters of Pure and Authentic ",
-    highlight: "Konkan Garcinia Indica",
+    title: "Global Exporters of Premium  ",
+    highlight: "Nashik Onions, Garlic & Ginger",
     
-    image:
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=2000&q=85",
+      image:"images/banners/slider1.png",
   },
 ];
 
