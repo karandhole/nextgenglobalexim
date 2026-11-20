@@ -360,6 +360,9 @@
   background: #5CBA3C;
   transform: scale(1.08);
 }
+.gv-center-play {
+  display: none !important;
+}
 
 /* FULLSCREEN */
 
