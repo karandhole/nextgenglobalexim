@@ -44,6 +44,27 @@ const galleryItems = [
     image: "/images/gallery/gallery1.jpeg",
     category: "Fresh Produce",
   },
+  {
+    id: 7,
+    title: "Export Product 07",
+    subtitle: "International Quality",
+    image: "/images/gallery/gallery7.jpeg",
+    category: "Fresh Produce",
+  },
+  {
+    id: 8,
+    title: "Export Product 08",
+    subtitle: "Global Export Selection",
+    image: "/images/gallery/gallery8.jpeg",
+    category: "Fresh Produce",
+  },
+  {
+    id: 9,
+    title: "Export Product 09",
+    subtitle: "Global Export Selection",
+    image: "/images/gallery/gallery9.jpeg",
+    category: "Fresh Produce",
+  },
 ];
 
 const GallerySection = () => {
